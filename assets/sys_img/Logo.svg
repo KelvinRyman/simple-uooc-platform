@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 1000 1000" role="img"
+    aria-labelledby="wd-logo-title wd-logo-description">
+    <title id="wd-logo-title">WD Logo</title>
+    <desc id="wd-logo-description">A blue square with rounded corners and the letters WD inside in white</desc>
+    <path fill="#0066cc" d="M0 0H840A160 160 0 0 1 1000 160V840A160 160 0 0 1 840 1000H160A160 160 0 0 1 0 840V0Z" />
+    <path fill="#fff"
+        d="M350 920L250 300h80l60 450 60-450h80l60 450 60-450h80l-100 620h-80l-60-450-60 450h-80zM700 920V300h200c60 0 100 40 100 100v420c0 60-40 100-100 100H700zm80-80h100c20 0 40-20 40-40V420c0-20-20-40-40-40H780v460z" />
+</svg>

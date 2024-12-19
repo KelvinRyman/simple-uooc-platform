@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST: coureseRegister</title>
+    <link rel="stylesheet" href="./../css/register.css">
+    <link rel="stylesheet" href="./../../src/vendor/fontawesome/css/all.min.css">
+    <link rel="icon" href="./../../src/images/favicon1.ico" type="image/x-icon">
+</head>
+
+<body>
+    <form action="" onsubmit="submitForm(event)" id="register_form">
+        <div class="heading">TEST: 注冊課程</div>
+        <ul>
+            <li class="line">
+                <i class="fa fa-user"></i>&emsp;
+                <input type="text" name="courseregisterid" placeholder="课程注册ID(TEST)" class="fill_in">
+            </li>
+            <li class="line">
+                <i class="fa fa-lock"></i>&emsp;
+                <input type="text" name="courseid" placeholder="填寫要注冊的課程ID" class="fill_in">
+            </li>
+            <li class="line">
+                <i class="fa fa-lock"></i>&emsp;
+                <input type="text" name="studentid" placeholder="student_id(TEST)" class="fill_in">
+            </li>
+            <li class="line" style="margin-right: 10px;margin-top:20px;">
+                <input type="submit" value="注册" class="register_button">&emsp;&emsp;
+                <a href="./student.html" style="font-size: 14px;" class="login">返回</a>
+            </li>
+        </ul>
+    </form>
+</body>
+
+<script src="./../js/courseRegister.js"></script>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>学生学习平台</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #45a049;
+            --text-color: #333;
+            --bg-color: #f5f5f5;
+            --card-bg: #fff;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            /* 之前的样式保持不变 */
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            /* 添加以下属性确保导航栏不会随滚动条出现而移动 */
+            left: 0;
+            right: 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 2rem;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+
+        .nav-container {
+            flex-grow: 1;
+            /* 让容器占据剩余空间 */
+            position: relative;
+            /* 相对定位用于居中 */
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a,
+        .nav-right a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover,
+        .nav-right a:hover {
+            background-color: var(--bg-color);
+        }
+
+        .nav-links a:active,
+        .nav-right a:active {
+            background-color: var(--bg-color);
+            filter: brightness(0.9);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+        }
+
+
+        /* 主内容区域 */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            margin-bottom: 1rem;
+        }
+
+        .task-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        /* 表单 */
+        .form-input {
+            margin: 0.5rem 0;
+            display: block;
+        }
+
+        button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+    </nav>
+
+
+    <!-- 主内容 -->
+    <main class="main-content">
+        <!-- 课程注册与查看 -->
+        <section class="card">
+            <h2>我的课程</h2>
+            <p>已注册课程：</p>
+            <ul>
+                <li>课程1：数据结构与算法</li>
+                <li>课程2：Web开发基础</li>
+            </ul>
+            <button>注册新课程</button>
+        </section>
+
+        <!-- 待办事项 -->
+        <section class="card">
+            <h2>待办事项</h2>
+            <div class="task-item">
+                <span>提交：数据结构作业1</span>
+                <button>提交作业</button>
+            </div>
+            <div class="task-item">
+                <span>完成：Web开发在线测试</span>
+                <button>开始测试</button>
+            </div>
+        </section>
+
+        <!-- 作业提交区域 -->
+        <section class="card">
+            <h2>提交作业</h2>
+            <label class="form-input">文本内容：
+                <textarea rows="4" cols="50"></textarea>
+            </label>
+            <label class="form-input">上传文件：
+                <input type="file">
+            </label>
+            <button>提交</button>
+        </section>
+
+        <!-- 已完成任务 -->
+        <section class="card">
+            <h2>已完成任务</h2>
+            <ul>
+                <li>数据结构作业1 - 已提交</li>
+                <li>Web开发在线测试 - 85分</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

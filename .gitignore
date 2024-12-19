@@ -1,0 +1,51 @@
+# Python相关
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VS Code相关
+.vscode/
+*.code-workspace
+
+# 环境配置
+flaskenv/
+.flaskenv
+.env
+*.env
+env/
+venv/
+ENV/
+
+# 数据库文件
+database/*.sql
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+
+# 静态资源
+node_modules/
+dist/
+build/
+.DS_Store
+
+# 其他
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace

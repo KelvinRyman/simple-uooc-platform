@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookDocker</title>
+    <link rel="stylesheet" href="./css/register.css">
+    <link rel="icon" href="./../../src/images/favicon1.ico" type="image/x-icon">
+</head>
+
+<body>
+    <form action="" onsubmit="submitForm(event)" id="register_form">
+        <div class="heading">注册 BookDocker 账号</div>
+        <ul>
+            <li class="line">
+                <i class="fa fa-user"></i>&emsp;
+                <input type="text" name="accountnumber" placeholder="账号名" class="fill_in">
+            </li>
+            <li class="line">
+                <i class="fa fa-lock"></i>&emsp;
+                <input type="password" name="password" placeholder="密码" class="fill_in">
+            </li>
+            <li class="line">
+                <i class="fa fa-lock"></i>&emsp;
+                <input type="password" name="re_password" placeholder="确认密码" class="fill_in"><br>
+                <p id="errormsg"></p>
+            </li>
+            <li class="line" style="margin-right: 10px;margin-top:20px;">
+                <input type="submit" value="注册" class="register_button" disabled>&emsp;&emsp;
+                <a href="./student.html" style="font-size: 14px;" class="login">已有账号?登录</a>
+            </li>
+        </ul>
+    </form>
+</body>
+
+<script src="./../js/register.js"></script>
+
+</html>

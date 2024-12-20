@@ -163,7 +163,7 @@ CREATE TABLE learning_progress (
 -- 登录失败记录表
 CREATE TABLE login_attempts (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT NOT NULL,
+    user_id VARCHAR(36) NOT NULL,
     ip_address VARCHAR(45),
     device_id VARCHAR(255),
     mac_address VARCHAR(17),

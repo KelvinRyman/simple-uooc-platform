@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WD 平台 - 用户登录</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="icon" href="../assets/sys_img/favicon.ico" type="image/x-icon">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body class="login-body">
+    <div class="login-container">
+        <h2 class="login-title">系统登录</h2>
+        <form id="login_form" onsubmit="submitForm(event)">
+            <div class="form-group">
+                <label for="userType">用户类型</label>
+                <select name="userType" id="userType" required>
+                    <option value="">请选择用户类型</option>
+                    <option value="1">学生</option>
+                    <option value="2">教师</option>
+                    <option value="3">管理员</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="username">用户名</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" required>
+                    <span class="toggle-password">👁‍🗨</span>
+                </div>
+            </div>
+            <div class="remember-options">
+                <div class="remember-item">
+                    <input type="checkbox" id="remember-username" name="remember-username">
+                    <label for="remember-username">记住账号</label>
+                </div>
+                <div class="remember-item">
+                    <input type="checkbox" id="remember-password" name="remember-password">
+                    <label for="remember-password">记住密码</label>
+                </div>
+            </div>
+            <div id="error-message" class="error-message"></div>
+            <div id="recaptcha-container" style="display: none; margin: 10px 0;">
+                <div
+                class="g-recaptcha"
+                data-sitekey="6Ld1LqEqAAAAALKF0Y_f2VtrUWmjJq8efNY51-zg"
+                ></div>
+            </div>
+            <div class="privacy-check">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy">我已阅读并同意<a href="privacy.html" class="privacy-link">隐私政策</a></label>
+            </div>
+            <button type="submit" class="login-btn">登录</button>
+            <button type="button" class="login-btn" onclick="location.href='register.html'">注册</button>
+        </form>
+        <a href="guestLogin.html" class="guest-link">游客登录</a>
+    </div>
+    <script type="module">
+        import AuthService from '../js/auth.js';
+        
+        // 页面加载时进行权限检查
+        document.addEventListener('DOMContentLoaded', async () => {
+            await AuthService.initPageAuth();
+        });
+    </script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

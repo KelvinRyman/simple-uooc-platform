@@ -1,0 +1,258 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --text-color: #333;
+    --bg-color: #f5f5f5;
+    --scrollbar-width: calc(100vw - 100%);
+}
+
+.welcome-section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 3rem 2rem;
+    text-align: left;
+}
+
+.welcome-text {
+    font-size: 2.4rem;
+    font-weight: normal;
+    line-height: 1.4;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.welcome-text span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 1.8rem;
+    }
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-right: calc(-1 * var(--scrollbar-width));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 之前的样式保持不变 */
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* 修改overflow-y为visible */
+    overflow-y: visible;
+    /* 添加overflow-x为hidden */
+    overflow-x: hidden;
+    /* 确保body宽度为100% */
+    width: 100%;
+}
+
+.navbar {
+    /* 之前的样式保持不变 */
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    /* 添加以下属性确保导航栏不会随滚动条出现而移动 */
+    left: 0;
+    right: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+.logo-link:active {
+    filter: brightness(0.9);
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a,
+.nav-right a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-right a:hover {
+    background-color: var(--bg-color);
+}
+
+.nav-links a:active,
+.nav-right a:active {
+    background-color: var(--bg-color);
+    filter: brightness(0.9);
+}
+
+.main-content {
+    /* 修改宽度计算方式 */
+    width: min(75%, 1400px);
+    margin: 80px auto 0;
+    padding: 2rem;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* 添加以下属性确保内容居中 */
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* 页脚样式 */
+.footer {
+    /* 之前的样式保持不变 */
+    background: linear-gradient(to right, var(--primary-color), #37474f);
+    color: white;
+    padding: 1rem;
+    /* 减小内边距 */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto;
+    /* 自动调整上边距 */
+    /* 添加以下属性确保页脚不会随滚动条出现而移动 */
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 46px;
+}
+
+.wave path {
+    fill: var(--bg-color);
+}
+
+.footer-content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.logout-btn {
+    padding: 8px 16px;
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #cc0000;
+}

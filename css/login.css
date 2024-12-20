@@ -1,0 +1,201 @@
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 登录页专用body样式 */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.guest-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.guest-link:hover {
+    text-decoration: underline;
+}
+
+.remember-options {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.remember-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember-item input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+}
+
+.privacy-check {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.privacy-check input[type="checkbox"] {
+    margin: 0;
+    width: auto;
+}
+
+.privacy-check label {
+    margin-left: 5px;
+}
+
+.privacy-link {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.privacy-link:hover {
+    text-decoration: none;
+}
+
+/* Privacy page styles */
+.privacy-body {
+    min-height: 100vh;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.privacy-container {
+    background: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-content {
+    color: #333;
+    line-height: 1.6;
+}
+
+.privacy-content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.privacy-content h2 {
+    color: #4CAF50;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.privacy-content section {
+    margin-bottom: 30px;
+}
+
+.privacy-content ul {
+    padding-left: 20px;
+}
+
+.privacy-content li {
+    margin-bottom: 8px;
+}
+
+.privacy-content p {
+    margin-bottom: 15px;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#recaptcha-container {
+    display: none;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: center;
+}

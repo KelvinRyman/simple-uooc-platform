@@ -1,39 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookDocker</title>
-    <link rel="stylesheet" href="./css/register.css">
-    <link rel="icon" href="./../../src/images/favicon1.ico" type="image/x-icon">
+    <title>WD 平台 - 用户注册</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="icon" href="../assets/sys_img/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <form action="" onsubmit="submitForm(event)" id="register_form">
-        <div class="heading">注册 BookDocker 账号</div>
-        <ul>
-            <li class="line">
-                <i class="fa fa-user"></i>&emsp;
-                <input type="text" name="accountnumber" placeholder="账号名" class="fill_in">
-            </li>
-            <li class="line">
-                <i class="fa fa-lock"></i>&emsp;
-                <input type="password" name="password" placeholder="密码" class="fill_in">
-            </li>
-            <li class="line">
-                <i class="fa fa-lock"></i>&emsp;
-                <input type="password" name="re_password" placeholder="确认密码" class="fill_in"><br>
-                <p id="errormsg"></p>
-            </li>
-            <li class="line" style="margin-right: 10px;margin-top:20px;">
-                <input type="submit" value="注册" class="register_button" disabled>&emsp;&emsp;
-                <a href="./student.html" style="font-size: 14px;" class="login">已有账号?登录</a>
-            </li>
-        </ul>
-    </form>
+    <div class="register-container">
+        <h2 class="register-title">用户注册</h2>
+        <form id="register_form">
+            <div class="form-group">
+                <label for="userType">用户类型</label>
+                <select name="userType" id="userType" required>
+                    <option value="">请选择用户类型</option>
+                    <option value="1">学生</option>
+                    <option value="2">教师</option>
+                    <option value="3">管理员</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="accountnumber">用户名</label>
+                <input type="text" id="accountnumber" name="accountnumber" required>
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="re_password">确认密码</label>
+                <input type="password" id="re_password" name="re_password" required>
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱（选填）</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div id="errormsg" class="error-message"></div>
+            <div class="privacy-check">
+                <input type="checkbox" id="privacy" name="privacy" required>
+                <label for="privacy">我已阅读并同意<a href="privacy.html" class="privacy-link">隐私政策</a></label>
+            </div>
+            <button type="submit" class="register-btn">注册</button>
+            <button type="button" class="register-btn" onclick="location.href='login.html'">返回登录</button>
+        </form>
+    </div>
+    <script src="../js/register.js"></script>
 </body>
-
-<script src="./../js/register.js"></script>
 
 </html>
